@@ -50,7 +50,7 @@
 - **application.properties**: 데이터베이스 연결을 위한 설정을 포함하고 있습니다. 아래와 같은 설정을 포함해야 합니다.
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/scheduler
+spring.datasource.url=jdbc:mysql://localhost:8080/schedules
 spring.datasource.username=root
 spring.datasource.password=56781234
 spring.jpa.hibernate.ddl-auto=update
