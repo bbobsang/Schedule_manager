@@ -14,7 +14,7 @@ public class DatabaseConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/schedule_manager");
+        dataSource.setUrl("jdbc:mysql://localhost:8080/schedule_manager");
         dataSource.setUsername("root");
         dataSource.setPassword("56781234");
         return dataSource;

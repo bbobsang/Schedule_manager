@@ -13,14 +13,15 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/schedules")
+@RequestMapping("/schedule_manager")
 public class ScheduleController {
     @Autowired
     private ScheduleService scheduleService;
+
     @PostMapping
     public ResponseEntity<ScheduleResponseDto> createSchedule(@RequestBody ScheduleRequestDto requestDto) {
         ScheduleResponseDto responseDto = scheduleService.createSchedule(requestDto);
-        return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
     }
     @GetMapping
     public ResponseEntity<List<ScheduleResponseDto>> getAllSchedules() {
